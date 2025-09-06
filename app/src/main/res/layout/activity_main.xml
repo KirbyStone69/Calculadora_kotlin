@@ -54,6 +54,8 @@
         android:textSize="28sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#D51EE9"
+        android:textColor="#0F2295"
         android:text="olaaaaaaaaaaaa"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="356dp" />
