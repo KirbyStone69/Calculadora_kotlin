@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var Boton1: Button
     lateinit var EditText1: EditText
 
+    var nombres = mutableListOf<String>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,12 +29,19 @@ class MainActivity : AppCompatActivity() {
         EditText1 = findViewById<EditText>(R.id.edit)
 
         Boton1.setOnClickListener {
+            var nombre : String
+            nombre = EditText1.text.toString()
+
             Toast.makeText(
                 applicationContext,
-                "Bienvenido don "+ EditText1.text.toString(),
+                "Bienvenido don " + nombre,
                 Toast.LENGTH_SHORT
             ).show()
-            TextView1.text = EditText1.text.toString()
+            nombres.add(nombre)
+
+            TextView1.text = nombres.joinToString(separator = "\n")
+
+            EditText1.text = null
         }
 
 
